@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
-USERNAME = "viriyananda212121"
-token="Bitchplease21"
+USERNAME = "Your Username"
+token="Your Token"
 pixela_endpoint = "https://pixe.la/v1/users"
 user_params ={
     "token":token,
@@ -25,7 +25,6 @@ headers ={
     # This puts the token inside the header of the requests,instead of the body of the url
 }
 today=datetime.now()
-print(today)
 #This creates a datetime object of a certain year and monty and day
 
 # response = requests.post(url=graph_endpoint, json=graph_params, headers=headers)
@@ -45,4 +44,3 @@ pixel_endpoint_update=f"{pixela_endpoint}/{USERNAME}/graphs/{graph_params['id']}
 # print(response.text)
 
 response=requests.delete(url=pixel_endpoint,headers=headers)
-print(response.text)
